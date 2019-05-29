@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>dictionaries</title>
+<title>import_modules</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13113,53 +13113,27 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Dictionaries are often called objects in other languages</span>
-<span class="c1"># Dictionaries are collections of key value pairs; the key being the unique identifier </span>
-<span class="c1"># of the data, and the pair being that data.</span>
-<span class="c1"># The keys can be a string or int, while the value might be a string, int, float, list </span>
-<span class="c1"># or another dictionary</span>
-<span class="c1"># Example:</span>
-<span class="n">student</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Ricardo&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">39</span><span class="p">,</span> <span class="s1">&#39;courses&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;History&#39;</span><span class="p">,</span> <span class="s1">&#39;Geography&#39;</span><span class="p">]}</span>
-<span class="n">student</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[2]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;name&#39;: &#39;Ricardo&#39;, &#39;age&#39;: 39, &#39;courses&#39;: [&#39;Math&#39;, &#39;History&#39;, &#39;Geography&#39;]}</pre>
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As expected, not all python code has to reside on one file.</p>
+<p>We can import code from other files using the <code>import</code> keyword.</p>
+<p>Python has a standard library that its always available to us, but also has other libraries available that we can import when needed.</p>
+<p>An example of Python's standard library is the <code>print()</code> function.</p>
+<p>We can also install third-party libraries and import them to our code.</p>
 
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Let&#39;s get the student&#39;s name:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Open the file my_module.py</span>
+<span class="c1"># That&#39;s our file that we want to use here, so let&#39;s import it:</span>
+<span class="kn">import</span> <span class="nn">my_module</span>
+<span class="c1"># What happens when we run this?</span>
 </pre></div>
 
     </div>
@@ -13176,9 +13150,90 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Ricardo
+<pre>Imported my_module...
 </pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># That&#39;s the first line in my_module.py, so it&#39;s working.</span>
+<span class="c1"># Now we want to call the find_index() function from my_module and use the following list as a parameter:</span>
+<span class="n">courses</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;History&#39;</span><span class="p">,</span> <span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;Art&#39;</span><span class="p">,</span> <span class="s1">&#39;Design&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Here&#39;s our find_index() function:</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_index</span><span class="p">(</span><span class="n">to_search</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Find the index of a value in a sequence&#39;&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">to_search</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">i</span>
+
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># It needs two parameters: to_search (where to search) and target (string to search for)</span>
+<span class="c1"># When calling a function in an imported file, you have to insert the module where the </span>
+<span class="c1"># function belongs to, so it can be done like this:</span>
+<span class="n">index</span> <span class="o">=</span> <span class="n">my_module</span><span class="o">.</span><span class="n">find_index</span><span class="p">(</span><span class="n">courses</span><span class="p">,</span> <span class="s1">&#39;Math&#39;</span><span class="p">)</span>
+<span class="c1"># Let&#39;s print it:</span>
+<span class="n">index</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
 </div>
 
 </div>
@@ -13190,8 +13245,13 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># However if the key doesn&#39;t exist it will throw an error:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="p">[</span><span class="s1">&#39;phone&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># That is correct. History is at index 0, so Math is at index 1.</span>
+<span class="c1"># Another way of calling our function is this:</span>
+<span class="c1"># Provide an alias to your module:</span>
+<span class="kn">import</span> <span class="nn">my_module</span> <span class="k">as</span> <span class="nn">mm</span>
+<span class="c1"># Use that to call the function:</span>
+<span class="n">index</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">find_index</span><span class="p">(</span><span class="n">courses</span><span class="p">,</span> <span class="s1">&#39;Math&#39;</span><span class="p">)</span>
+<span class="n">index</span>
 </pre></div>
 
     </div>
@@ -13204,19 +13264,15 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-4-41b0d17c12ab&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># However if the key doesn&#39;t exist it will throw an error:</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>student<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;phone&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">KeyError</span>: &#39;phone&#39;</pre>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
 </div>
+
 </div>
 
 </div>
@@ -13228,10 +13284,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># So if unsure about the key value, use the get method (highly used in if statements):</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;phone&#39;</span><span class="p">))</span>
-<span class="c1"># Or get all the keys (and loop them):</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can even import just the find_index() function from the module:</span>
+<span class="kn">from</span> <span class="nn">my_module</span> <span class="k">import</span> <span class="n">find_index</span>
+<span class="n">index</span> <span class="o">=</span> <span class="n">find_index</span><span class="p">(</span><span class="n">courses</span><span class="p">,</span> <span class="s1">&#39;Math&#39;</span><span class="p">)</span>
+<span class="n">index</span>
 </pre></div>
 
     </div>
@@ -13244,14 +13300,15 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>None
-dict_keys([&#39;name&#39;, &#39;age&#39;, &#39;courses&#39;])
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
 </div>
+
 </div>
 
 </div>
@@ -13263,167 +13320,11 @@ dict_keys([&#39;name&#39;, &#39;age&#39;, &#39;courses&#39;])
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Let&#39;s add the phone to our dict:</span>
-<span class="n">student</span><span class="p">[</span><span class="s1">&#39;phone&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;123456789&#39;</span>
-<span class="n">student</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[6]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;name&#39;: &#39;Ricardo&#39;,
- &#39;age&#39;: 39,
- &#39;courses&#39;: [&#39;Math&#39;, &#39;History&#39;, &#39;Geography&#39;],
- &#39;phone&#39;: &#39;123456789&#39;}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># When adding, if the key already exists it will be updated:</span>
-<span class="n">student</span><span class="p">[</span><span class="s1">&#39;phone&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;987654321&#39;</span>
-<span class="n">student</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;name&#39;: &#39;Ricardo&#39;,
- &#39;age&#39;: 39,
- &#39;courses&#39;: [&#39;Math&#39;, &#39;History&#39;, &#39;Geography&#39;],
- &#39;phone&#39;: &#39;987654321&#39;}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If we want to update several keys at a time, we use the update method, wich </span>
-<span class="c1"># takes a dictionary as a parameter.</span>
-<span class="c1"># The update below will update the name, phone and courses. Being a list, </span>
-<span class="c1"># we&#39;ll have to append the new course before:</span>
-<span class="n">new_courses</span> <span class="o">=</span> <span class="n">student</span><span class="p">[</span><span class="s1">&#39;courses&#39;</span><span class="p">]</span>
-<span class="n">new_courses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Art&#39;</span><span class="p">)</span>
-<span class="c1"># and then pass that variable to the update method:</span>
-<span class="n">student</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Ricardo F&#39;</span><span class="p">,</span> <span class="s1">&#39;phone&#39;</span><span class="p">:</span> <span class="mi">123456789</span><span class="p">,</span> <span class="s1">&#39;courses&#39;</span><span class="p">:</span> <span class="n">new_courses</span><span class="p">})</span>
-<span class="n">student</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;name&#39;: &#39;Ricardo F&#39;,
- &#39;age&#39;: 39,
- &#39;courses&#39;: [&#39;Math&#39;, &#39;History&#39;, &#39;Geography&#39;, &#39;Art&#39;],
- &#39;phone&#39;: 123456789}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If we want to remove a key from the dict, we can use:</span>
-<span class="k">del</span> <span class="n">student</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
-<span class="n">student</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;name&#39;: &#39;Ricardo F&#39;,
- &#39;courses&#39;: [&#39;Math&#39;, &#39;History&#39;, &#39;Geography&#39;, &#39;Art&#39;],
- &#39;phone&#39;: 123456789}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ...or the pop() method we already saw in lists, which returns the value of the key we just popped:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;phone&#39;</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Or we could want to import the find_index() function and the &#39;test&#39; variable:</span>
+<span class="kn">from</span> <span class="nn">my_module</span> <span class="k">import</span> <span class="n">find_index</span><span class="p">,</span> <span class="n">test</span>
+<span class="n">index</span> <span class="o">=</span> <span class="n">find_index</span><span class="p">(</span><span class="n">courses</span><span class="p">,</span> <span class="s1">&#39;Math&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13440,8 +13341,8 @@ dict_keys([&#39;name&#39;, &#39;age&#39;, &#39;courses&#39;])
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>123456789
-{&#39;name&#39;: &#39;Ricardo F&#39;, &#39;courses&#39;: [&#39;Math&#39;, &#39;History&#39;, &#39;Geography&#39;, &#39;Art&#39;]}
+<pre>1
+Test String
 </pre>
 </div>
 </div>
@@ -13452,12 +13353,13 @@ dict_keys([&#39;name&#39;, &#39;age&#39;, &#39;courses&#39;])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># To get the length of our dict:</span>
-<span class="n">student</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Ricardo&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">39</span><span class="p">,</span> <span class="s1">&#39;courses&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;History&#39;</span><span class="p">,</span> <span class="s1">&#39;Geography&#39;</span><span class="p">],</span> <span class="s1">&#39;phone&#39;</span><span class="p">:</span> <span class="mi">123456789</span><span class="p">}</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># When using import, Python checks some predefined locations for the module. </span>
+<span class="c1"># That list of locations is called the sys.path. Let&#39;s see it</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13470,15 +13372,148 @@ dict_keys([&#39;name&#39;, &#39;age&#39;, &#39;courses&#39;])
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>4</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;/workspace/python/python_course&#39;, &#39;/usr/lib/python37.zip&#39;, &#39;/usr/lib/python3.7&#39;, &#39;/usr/lib/python3.7/lib-dynload&#39;, &#39;&#39;, &#39;/home/xotik/.local/lib/python3.7/site-packages&#39;, &#39;/usr/lib/python3.7/site-packages&#39;, &#39;/usr/lib/python3.7/site-packages/IPython/extensions&#39;, &#39;/home/xotik/.ipython&#39;]
+</pre>
+</div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If we want to add a custom location to this path, we need to understand </span>
+<span class="c1"># what environment variables are</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Standard-Library">Standard Library<a class="anchor-link" href="#Standard-Library">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#There are a lot of modules in the standard library, but here&#39;s some of the most used:</span>
+<span class="c1"># math</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="n">rads</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">square_root</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">pows</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pows</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">rads</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">square_root</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>81.0
+1.57
+3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># datetime and calendar</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">calendar</span>
+<span class="c1"># using datetime</span>
+<span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">today</span><span class="p">)</span>
+<span class="c1"># using calendar</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calendar</span><span class="o">.</span><span class="n">isleap</span><span class="p">(</span><span class="mi">2017</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2019-05-29
+False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># os - gives access to the operating system</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span> <span class="c1"># gets the current working directory</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/workspace/python/python_course
+</pre>
+</div>
 </div>
 
 </div>

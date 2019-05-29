@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>dictionaries</title>
+<title>variables</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13113,279 +13113,58 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Dictionaries are often called objects in other languages</span>
-<span class="c1"># Dictionaries are collections of key value pairs; the key being the unique identifier </span>
-<span class="c1"># of the data, and the pair being that data.</span>
-<span class="c1"># The keys can be a string or int, while the value might be a string, int, float, list </span>
-<span class="c1"># or another dictionary</span>
-<span class="c1"># Example:</span>
-<span class="n">student</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Ricardo&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">39</span><span class="p">,</span> <span class="s1">&#39;courses&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;History&#39;</span><span class="p">,</span> <span class="s1">&#39;Geography&#39;</span><span class="p">]}</span>
-<span class="n">student</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[2]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;name&#39;: &#39;Ricardo&#39;, &#39;age&#39;: 39, &#39;courses&#39;: [&#39;Math&#39;, &#39;History&#39;, &#39;Geography&#39;]}</pre>
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Variables">Variables<a class="anchor-link" href="#Variables">&#182;</a></h2><p>As in any other programming languages, by defining a variable you're telling your program that you're assigning a value to a new object. That value will be callable by the variable name you choose.</p>
+<p>The syntax is usually <code>variable_name = variable_value</code> .</p>
+<p>The variable name only accepts letters, numbers and underscores, but it must <strong>always</strong> start with a letter. So, this will work: <code>var12 = 1</code> , this won't: <code>12var = 1</code></p>
+<p>The variable value must be a valid python datatype, for example a string, number, list or dictionary.</p>
 
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Let&#39;s get the student&#39;s name:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Ricardo
-</pre>
-</div>
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Initializing-variables">Initializing variables<a class="anchor-link" href="#Initializing-variables">&#182;</a></h3><p>You can initialize variables that are empty at first, as long as you define its datatype, for example:</p>
 
 </div>
 </div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># However if the key doesn&#39;t exist it will throw an error:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="p">[</span><span class="s1">&#39;phone&#39;</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-4-41b0d17c12ab&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># However if the key doesn&#39;t exist it will throw an error:</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>student<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;phone&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">KeyError</span>: &#39;phone&#39;</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># So if unsure about the key value, use the get method (highly used in if statements):</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;phone&#39;</span><span class="p">))</span>
-<span class="c1"># Or get all the keys (and loop them):</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>None
-dict_keys([&#39;name&#39;, &#39;age&#39;, &#39;courses&#39;])
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Let&#39;s add the phone to our dict:</span>
-<span class="n">student</span><span class="p">[</span><span class="s1">&#39;phone&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;123456789&#39;</span>
-<span class="n">student</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[6]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;name&#39;: &#39;Ricardo&#39;,
- &#39;age&#39;: 39,
- &#39;courses&#39;: [&#39;Math&#39;, &#39;History&#39;, &#39;Geography&#39;],
- &#39;phone&#39;: &#39;123456789&#39;}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># When adding, if the key already exists it will be updated:</span>
-<span class="n">student</span><span class="p">[</span><span class="s1">&#39;phone&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;987654321&#39;</span>
-<span class="n">student</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;name&#39;: &#39;Ricardo&#39;,
- &#39;age&#39;: 39,
- &#39;courses&#39;: [&#39;Math&#39;, &#39;History&#39;, &#39;Geography&#39;],
- &#39;phone&#39;: &#39;987654321&#39;}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If we want to update several keys at a time, we use the update method, wich </span>
-<span class="c1"># takes a dictionary as a parameter.</span>
-<span class="c1"># The update below will update the name, phone and courses. Being a list, </span>
-<span class="c1"># we&#39;ll have to append the new course before:</span>
-<span class="n">new_courses</span> <span class="o">=</span> <span class="n">student</span><span class="p">[</span><span class="s1">&#39;courses&#39;</span><span class="p">]</span>
-<span class="n">new_courses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Art&#39;</span><span class="p">)</span>
-<span class="c1"># and then pass that variable to the update method:</span>
-<span class="n">student</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Ricardo F&#39;</span><span class="p">,</span> <span class="s1">&#39;phone&#39;</span><span class="p">:</span> <span class="mi">123456789</span><span class="p">,</span> <span class="s1">&#39;courses&#39;</span><span class="p">:</span> <span class="n">new_courses</span><span class="p">})</span>
-<span class="n">student</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">empty_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="c1"># automatically defines the datatype to string</span>
+<span class="n">another_empty_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">()</span>
+<span class="n">empty_list</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># automatically defines the datatype to list</span>
+<span class="n">another_empty_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;name&#39;: &#39;Ricardo F&#39;,
- &#39;age&#39;: 39,
- &#39;courses&#39;: [&#39;Math&#39;, &#39;History&#39;, &#39;Geography&#39;, &#39;Art&#39;],
- &#39;phone&#39;: 123456789}</pre>
 </div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Setting-variables">Setting variables<a class="anchor-link" href="#Setting-variables">&#182;</a></h3><p>You don't have to initialize variables, unless you want to. Just set them, and python will automatically infer the datatype:</p>
 
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If we want to remove a key from the dict, we can use:</span>
-<span class="k">del</span> <span class="n">student</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
-<span class="n">student</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_string</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+
+<span class="c1"># Check the variable&#39;s datatype (in this case a string):</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13404,9 +13183,7 @@ dict_keys([&#39;name&#39;, &#39;age&#39;, &#39;courses&#39;])
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;name&#39;: &#39;Ricardo F&#39;,
- &#39;courses&#39;: [&#39;Math&#39;, &#39;History&#39;, &#39;Geography&#39;, &#39;Art&#39;],
- &#39;phone&#39;: 123456789}</pre>
+<pre>str</pre>
 </div>
 
 </div>
@@ -13414,16 +13191,24 @@ dict_keys([&#39;name&#39;, &#39;age&#39;, &#39;courses&#39;])
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It's also possible to create multiple variables at once:</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ...or the pop() method we already saw in lists, which returns the value of the key we just popped:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;phone&#39;</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;Olá&#39;</span><span class="p">,</span> <span class="s1">&#39;Halo&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13440,8 +13225,9 @@ dict_keys([&#39;name&#39;, &#39;age&#39;, &#39;courses&#39;])
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>123456789
-{&#39;name&#39;: &#39;Ricardo F&#39;, &#39;courses&#39;: [&#39;Math&#39;, &#39;History&#39;, &#39;Geography&#39;, &#39;Art&#39;]}
+<pre>Hello
+Olá
+Halo
 </pre>
 </div>
 </div>
@@ -13450,14 +13236,23 @@ dict_keys([&#39;name&#39;, &#39;age&#39;, &#39;courses&#39;])
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It's also possible to create multiple equal variables at once:</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># To get the length of our dict:</span>
-<span class="n">student</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Ricardo&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">39</span><span class="p">,</span> <span class="s1">&#39;courses&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;History&#39;</span><span class="p">,</span> <span class="s1">&#39;Geography&#39;</span><span class="p">],</span> <span class="s1">&#39;phone&#39;</span><span class="p">:</span> <span class="mi">123456789</span><span class="p">}</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13470,15 +13265,325 @@ dict_keys([&#39;name&#39;, &#39;age&#39;, &#39;courses&#39;])
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10
+10
+10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>Be careful with variable names, since upper/lowercase matters and are different things, for example <code>a</code> and <code>A</code> will be different variables. As a convention, variables in python are always lowercase and have underscores between words.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Getting-variables">Getting variables<a class="anchor-link" href="#Getting-variables">&#182;</a></h3><p>Simple enough, just type the variable name to access it's value:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_string</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>4</pre>
+<pre>&#39;Hello&#39;</pre>
 </div>
 
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Swapping-variable-values">Swapping variable values<a class="anchor-link" href="#Swapping-variable-values">&#182;</a></h3><p>Sometimes we need to change the value of a variable, without loosing it's previous value. The traditional way of doing it is cloning the variable and then changing it's value:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;10&#39;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;20&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>20 10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>But there's a shortcut to do this:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;10&#39;</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;20&#39;</span><span class="p">,</span> <span class="n">a</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>20 10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Listing-all-the-current-local-variables">Listing all the current local variables<a class="anchor-link" href="#Listing-all-the-current-local-variables">&#182;</a></h3><p>If you want to have a list of all the local variables currently set in your script, just call the <code>whos</code> command. This command will return the variable name, type and value. If the variable is of type list, tuple, set or dictionary it will only return its length.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">whos</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Variable               Type    Data/Info
+----------------------------------------
+a                      str     20
+another_empty_list     list    n=0
+another_empty_string   str     
+b                      str     10
+c                      int     10
+empty_list             list    n=0
+empty_string           str     
+my_string              str     Hello
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reserved-keywords">Reserved keywords<a class="anchor-link" href="#Reserved-keywords">&#182;</a></h3><p>Python has reserved keywords that you can't use to name variables, for example <code>def</code> or <code>for</code>. Basically each and every word used to write a python code can't be used.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="err">= &#39;</span><span class="nf">hi</span><span class="s1">&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-16-e56451b3551e&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-red-fg">    def = &#39;hi&#39;</span>
+        ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Just as a curiosity, the reserved word <code>print</code> will actually work:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="o">=</span> <span class="s1">&#39;hi&#39;</span>
+<span class="nb">print</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;hi&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>But never do it, or the print function will stop working!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I&#39;m not going to appear...&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-18-da2695c0c4c4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;I&#39;m not going to appear...&#34;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">TypeError</span>: &#39;str&#39; object is not callable</pre>
+</div>
 </div>
 
 </div>
